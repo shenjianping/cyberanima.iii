@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_51">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="lib/fudannlp.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-annotations-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-auth-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-client-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-common-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-hdfs-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-app-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-common-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-core-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-jobclient-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-shuffle-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-yarn-api-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-yarn-client-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-yarn-common-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-yarn-server-common-2.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-examples-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-h2o_2.10-0.11.0-dependency-reduced.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-h2o_2.10-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-hdfs-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-integration-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-math-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-math-scala_2.10-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-mr-0.11.0-job.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-mr-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-spark_2.10-0.11.0-dependency-reduced.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-spark_2.10-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mahout-spark-shell_2.10-0.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-nop-1.7.12.jar"/>
+	<classpathentry kind="lib" path="lib/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-support-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-jdbc-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-jms-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-test-3.2.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-web-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-webmvc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/stanford-corenlp-3.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/trove.jar"/>
+	<classpathentry kind="lib" path="lib/zwlcore.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
