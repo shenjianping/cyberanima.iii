@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+<!-- 	<settings> -->
+<!-- 		<setting name="logImpl" value="log4j" /> -->
+<!-- 	</settings> -->
+
+	<typeAliases>
+		<package name="com.viki.po" />
+		<package name="com.tongyeyun.po" />
+		<package name="com.common.po"/>
+		<package name="com.ir.po"/>
+	</typeAliases>
+	
+	<plugins>
+		<plugin interceptor="com.zwlsoft.pagehelper.PageHelper">
+			<property name="dialect" value="mssql" />
+		</plugin>
+	</plugins>
+</configuration>

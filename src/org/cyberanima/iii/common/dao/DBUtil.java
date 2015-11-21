@@ -145,14 +145,6 @@ public class DBUtil
         return dataRow;
     }
 
-    /**
-     * 鑾峰彇绗竴鏉�
-     * 
-     * @param sql
-     * @param properties
-     * @return
-     * @throws Exception
-     */
     public static DataRow getDataRow(String sql) throws Exception
     {
         DataSourceHolder.setCustomerType(DataSourceConstant.mssqlRead);
@@ -239,6 +231,5 @@ public class DBUtil
                 return null;
             }
         });
-        System.out.println("鎴愬姛鍙戦�侀�氱煡 :teaserID: " + teaserID + " , receiverID: " + receiverID + " , senderUserID: " + senderUserID + " , finalScore: " + finalScore + " , report: " + report);
     }
 }

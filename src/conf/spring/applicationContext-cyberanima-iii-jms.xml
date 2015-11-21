@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:amq="http://activemq.apache.org/schema/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.5.0.xsd">
+	<!-- ActiveMQ connectionFactory -->
+	<amq:connectionFactory id="jmsConnectionFactory" brokerURL="${jms_server}" />
+	
+	<bean id="myJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory">
+			<bean class="org.springframework.jms.connection.SingleConnectionFactory">
+				<property name="targetConnectionFactory" ref="jmsConnectionFactory" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="perceptionMessageProducer" class="org.cyberanima.iii.mas.perception.jms.PerceptionMessageProducer">
+		<property name="template" ref="myJmsTemplate" />
+		<property name="destination" value="ActiveMQ.RESOURCE" />
+	</bean>
+</beans> 

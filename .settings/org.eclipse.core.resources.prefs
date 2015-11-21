@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/org/cyberanima/iii/common/dao/DBUtil.java=UTF-8
+encoding//src/org/cyberanima/iii/common/init/AbstractSmartLifecycle.java=UTF-8
+encoding//src/org/cyberanima/iii/common/jms/MessageFactory.java=UTF-8
+encoding//src/org/cyberanima/iii/common/jms/MessageProtector.java=UTF-8
+encoding//src/org/cyberanima/iii/mas/perception/processor/PerceptionMessageProcesser.java=UTF-8

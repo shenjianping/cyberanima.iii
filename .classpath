@@ -56,5 +56,8 @@
 	<classpathentry kind="lib" path="lib/stanford-corenlp-3.5.2.jar"/>
 	<classpathentry kind="lib" path="lib/trove.jar"/>
 	<classpathentry kind="lib" path="lib/zwlcore.jar"/>
+	<classpathentry kind="lib" path="lib/activemq-core-5.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/activemq-protobuf-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/javax.jms.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

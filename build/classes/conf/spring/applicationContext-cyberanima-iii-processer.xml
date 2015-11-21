@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:amq="http://activemq.apache.org/schema/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.5.0.xsd">
+ 
+   <!-- 监听节点  -->
+	<amq:queue name="PERCEPTION" physicalName="ActiveMQ.RESOURCE.${jms_receive_node}" />
+	
+    <bean id="perceptionMessageProcesser" class="org.cyberanima.iii.mas.perception.processer.PerceptionMessageProcesser" />
+
+	<!-- 消息接收 -->
+	<bean id="perceptionMessageConsumer" class="org.cyberanima.iii.mas.perception.jms.PerceptionMessageConsumer">
+		<property name="destName"><value>ActiveMQ.RESOURCE.${jms_receive_node}</value></property>
+	</bean>
+
+	<!-- 订阅 -->
+	<bean id="senseTopicMessageListener" class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
+		<constructor-arg ref="perceptionMessageConsumer" />
+		<property name="defaultListenerMethod" value="receive" />
+	</bean>
+
+	<!-- 消息监听 TOPIC 模式-->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="jmsConnectionFactory" />
+		<property name="destination" ref="SENSE_TOPIC" />
+		<property name="messageListener" ref="senseTopicMessageListener" />
+	</bean>
+</beans>
