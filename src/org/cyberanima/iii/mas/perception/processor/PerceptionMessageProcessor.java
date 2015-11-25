@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.cyberanima.iii.common.jms.*;
 import org.cyberanima.iii.mas.perception.jms.*;
 
-@Service(value = "perceptionMessageProcesser")
-public class PerceptionMessageProcesser implements MessageProcesser
+@Service(value = "perceptionMessageProcessor")
+public class PerceptionMessageProcessor implements MessageProcesser
 {
 
     protected transient final Log logger = LogFactory.getLog(getClass());

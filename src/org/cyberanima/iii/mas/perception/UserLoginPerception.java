@@ -73,6 +73,7 @@ public class UserLoginPerception
         // TypeProperties.MatchmakingTaskStatus_Handling, "", null);
         DataWrite.UBUpateByID(id, TypeProperties.UB_Perceived);
         perceptionMessageProducer.sendMsg(MessageFactory.createMessage(MessageFactory.MessageType.userLogin, ub_userlogin, paramMap), "iii_perception_ub_userlogin");
+        System.out.println("HERE");
 
     }
 }

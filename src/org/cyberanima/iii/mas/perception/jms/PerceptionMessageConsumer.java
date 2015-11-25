@@ -13,15 +13,15 @@ public class PerceptionMessageConsumer {
 //	private List<PayProcesser> processerList = new ArrayList<PayProcesser>();
 	
 	@Autowired
-	private PerceptionMessageProcesser userLoginProcesser;
+	private PerceptionMessageProcessor userLoginProcessor;
 	
 	private String destName;
 
 	public void receive(Message message) {
 		log.info(message + " -- " + destName);
-		System.out.println("helloworldProcesser: "+ userLoginProcesser);
+		System.out.println("helloworldProcesser: "+ userLoginProcessor);
 		System.out.println(message + " -- " + destName);
-		userLoginProcesser.process(message);
+		userLoginProcessor.process(message);
 	}
 
 	public void setDestName(String destName) {

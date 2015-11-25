@@ -7,7 +7,7 @@
    <!-- 监听节点  -->
 	<amq:queue name="PERCEPTION" physicalName="ActiveMQ.RESOURCE.${jms_receive_node}" />
 	
-    <bean id="perceptionMessageProcesser" class="org.cyberanima.iii.mas.perception.processer.PerceptionMessageProcesser" />
+    <bean id="perceptionMessageProcessor" class="org.cyberanima.iii.mas.perception.processor.PerceptionMessageProcessor" />
 
 	<!-- 消息接收 -->
 	<bean id="perceptionMessageConsumer" class="org.cyberanima.iii.mas.perception.jms.PerceptionMessageConsumer">
@@ -15,7 +15,7 @@
 	</bean>
 
 	<!-- 订阅 -->
-	<bean id="senseTopicMessageListener" class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
+	<bean id="perceptionMessageListener" class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
 		<constructor-arg ref="perceptionMessageConsumer" />
 		<property name="defaultListenerMethod" value="receive" />
 	</bean>
@@ -23,7 +23,7 @@
 	<!-- 消息监听 TOPIC 模式-->
 	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="jmsConnectionFactory" />
-		<property name="destination" ref="SENSE_TOPIC" />
-		<property name="messageListener" ref="senseTopicMessageListener" />
+		<property name="destination" ref="PERCEPTION" />
+		<property name="messageListener" ref="perceptionMessageListener" />
 	</bean>
 </beans>
