@@ -8,8 +8,8 @@ public class DataSearch {
 
 	public static DataRow getUnperceivedUB() throws Exception
     {
-        String sqlComText = "SELECT TOP 1 * FROM userbehavior WHERE pstatus = " + TypeProperties.UB_Unperceived
-        		+ " ORDER BY time";
+        String sqlComText = "SELECT * FROM userbehavior WHERE pstatus = " + TypeProperties.UB_Unperceived
+        		+ " ORDER BY time ASC LIMIT 0, 1";
         return DBUtil.getDataRow(sqlComText);
     }
 
