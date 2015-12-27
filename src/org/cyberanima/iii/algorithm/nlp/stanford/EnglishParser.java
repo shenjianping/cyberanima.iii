@@ -92,8 +92,4 @@ public class EnglishParser {
 	    // Both sentence and token offsets start at 1!
 	    Map<Integer, CorefChain> graph = document.get(CorefChainAnnotation.class);
 	}
-	
-	public static void main(String args[]) {
-		EnglishParser.Parse("./testcase/nlp/en.txt");
-	}
 }

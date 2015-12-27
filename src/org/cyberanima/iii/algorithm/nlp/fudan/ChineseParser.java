@@ -62,8 +62,4 @@ public class ChineseParser {
 			e.printStackTrace();
 		}
 	}
-	
-	public static void main(String args[]) {
-		ChineseParser.Parse("./testcase/nlp/zh.txt");
-	}
 }
