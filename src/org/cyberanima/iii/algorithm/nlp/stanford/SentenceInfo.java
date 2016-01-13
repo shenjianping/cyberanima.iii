@@ -5,10 +5,17 @@ import edu.stanford.nlp.semgraph.SemanticGraph;
 import edu.stanford.nlp.trees.Tree;
 
 public class SentenceInfo {
+	private String sentence;
 	private ArrayList<String[]> wordposes;
 	private Tree tree;
 	private SemanticGraph dependencies;
 	
+	public String getSentence() {
+		return this.sentence;
+	}
+	public void setSentence(String sentence) {
+		this.sentence = sentence;
+	}
 	public ArrayList<String[]> getWordposes() {
 		return this.wordposes;
 	}

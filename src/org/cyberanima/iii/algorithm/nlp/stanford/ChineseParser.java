@@ -263,6 +263,7 @@ public class ChineseParser {
 	    ArrayList<String[]> wordposes = new ArrayList<String[]>();
 	    
 	    SentenceInfo sInfo = new SentenceInfo();
+	    sInfo.setSentence(sentenceText);
 	    
 	    for(CoreMap sentence: sentences) {
 	    	// traversing the words in the current sentence
