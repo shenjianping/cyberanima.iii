@@ -141,7 +141,7 @@ public class ChineseTopicAnalyzer {
 			SequenceFileUtils.WriteIntLongSeqFileByHashMap(freqHM, vecFileDirectory + "frequency.file-0");
 			SequenceFileUtils.WriteTextVectorSeqFileByHashMap(tfVecHM, vecFileDirectory + "tf-vectors/part-r-00000");
 			
-			//PrintHashMap(dicHMRev);
+			PrintHashMap(dicHMRev);
 			//PrintHashMap(freqHM);
 			//PrintHashMap(tfVecHM);
 			
