@@ -210,9 +210,8 @@ public class ChineseParser {
 	    		// this is the POS tag of the token
 	    		String pos = token.get(PartOfSpeechAnnotation.class);
 	        
-	    		if (pos.equals("NR") || pos.equals("NN") || pos.equals("VV") || pos.equals("JJ") || pos.equals("VA") ) {
-	    			outputText += word + "(" + pos + ")" + " ";
-	    		}
+	    		
+	    	    outputText += word + "(" + pos + ")" + " ";
 	      	}
 	    }
 	    
@@ -241,9 +240,8 @@ public class ChineseParser {
 	    		// this is the POS tag of the token
 	    		String pos = token.get(PartOfSpeechAnnotation.class);
 	        
-	    		if (pos.equals("NR") || pos.equals("NN") || pos.equals("VV") || pos.equals("JJ") || pos.equals("VA") ) {
-	    			outputAL.add(word);
-	    		}
+
+	    		outputAL.add(word);
 	      	}
 	    }
 	    
